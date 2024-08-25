@@ -36,7 +36,7 @@ header nav ul li a.active::after {
 }
 
 
-/* Style for toggle button bars */
+/* Style for toggle button bars for the show list btn */
 .bar--top {
     bottom: calc(50% + 8px + 1px);
     transition-property: bottom, transform;
@@ -74,26 +74,7 @@ header nav ul li a.active::after {
 }
 
 
-
-/* .responsive-nav  */
-.responsive-nav-container {
-    position: fixed;
-    height: 100vh;
-    z-index: 100;
-    top: 0;
-    width: 80%;
-    background-color: #1b1b1b;
-    display: none;
-    transform: translate(-100%);
-}
-
-.responsive-nav-container.open-list {
-    transform: translate(0);
-}
-
-
 /* header media queries */
-
 @media (max-width : 768px) {
     header .bottom-header-part {
         justify-content: space-between;
@@ -112,11 +93,24 @@ header nav ul li a.active::after {
     .responsive-nav-container {
         display: block;
     }
+    .responsive-nav-container .userMenu{
+        right: -180px;
+        left: 0;
+    }
 }
 
 @media (max-width : 468px) {
     .responsive-nav-container {
         width: 100%;
+        height: calc(100vh - 85px);
+        top: 85px;
+    }
+
+    header .top {
+        display: none;
     }
 }
+
+
+
 
