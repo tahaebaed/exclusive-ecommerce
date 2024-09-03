@@ -1,10 +1,15 @@
 // import React from 'react';
 import { useState } from 'react';
-import { CiShoppingCart } from 'react-icons/ci';
+
+// import components---
+import UserMenu from './UserMenu';
+
+// import icons---
+import { CiSearch, CiShoppingCart } from 'react-icons/ci';
 import { IoIosHeartEmpty } from 'react-icons/io';
 import { LuUser } from 'react-icons/lu';
 import { NavLink } from 'react-router-dom';
-import UserMenu from './UserMenu';
+
 
 function Header() {
 
@@ -67,15 +72,7 @@ function Header() {
                             />
                             <div className="bg-gray-100 mt-[0.1em]">
                                 <label htmlFor="search" className='hover:cursor-pointer'>
-                                    <svg
-                                    className="h-[1.1em] w-[1.1em] fill-gray-950"
-                                    aria-hidden="true"
-                                    viewBox="0 0 24 24"
-                                    >
-                                    <g>
-                                        <path d="M21.53 20.47l-3.66-3.66C19.195 15.24 20 13.214 20 11c0-4.97-4.03-9-9-9s-9 4.03-9 9 4.03 9 9 9c2.215 0 4.24-.804 5.808-2.13l3.66 3.66c.147.146.34.22.53.22s.385-.073.53-.22c.295-.293.295-.767.002-1.06zM3.5 11c0-4.135 3.365-7.5 7.5-7.5s7.5 3.365 7.5 7.5-3.365 7.5-7.5 7.5-7.5-3.365-7.5-7.5z"></path>
-                                    </g>
-                                    </svg>
+                                    <CiSearch size={20}/>
                                 </label>
                             </div>
                         </div>
@@ -166,11 +163,9 @@ function Header() {
                         <div className="w-full">
                             <div className="flex w-full">
                                 <div className="flex items-center justify-center rounded-tl-lg rounded-bl-lg border-r border-gray-200 bg-white p-8">
-                                    <svg viewBox="0 0 20 20" aria-hidden="true" className="pointer-events-none absolute w-5 fill-gray-500 transition">
-                                    <path d="M16.72 17.78a.75.75 0 1 0 1.06-1.06l-1.06 1.06ZM9 14.5A5.5 5.5 0 0 1 3.5 9H2a7 7 0 0 0 7 7v-1.5ZM3.5 9A5.5 5.5 0 0 1 9 3.5V2a7 7 0 0 0-7 7h1.5ZM9 3.5A5.5 5.5 0 0 1 14.5 9H16a7 7 0 0 0-7-7v1.5Zm3.89 10.45 3.83 3.83 1.06-1.06-3.83-3.83-1.06 1.06ZM14.5 9a5.48 5.48 0 0 1-1.61 3.89l1.06 1.06A6.98 6.98 0 0 0 16 9h-1.5Zm-1.61 3.89A5.48 5.48 0 0 1 9 14.5V16a6.98 6.98 0 0 0 4.95-2.05l-1.06-1.06Z"></path>
-                                    </svg>
+                                    <CiSearch className="pointer-events-none absolute w-5 fill-gray-500 transition" size={20}/>
                                 </div>
-                                <input type="text" className="w-[100%] bg-white pl-2 pr-6 text-[20px] font-semibold outline-0" placeholder="Search For Products..." />
+                                <input type="text" className="w-[100%] bg-white text-black pl-2 pr-6 text-[20px] font-semibold outline-0" placeholder="Search For Products..." />
                                 <input type="button" value="Search" className="bg-blue-500 p-2 rounded-tr-lg rounded-br-lg text-white font-semibold hover:bg-blue-800 transition-colors" />
                             </div>
                         </div>
